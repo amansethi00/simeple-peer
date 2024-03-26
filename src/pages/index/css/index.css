@@ -1,0 +1,74 @@
+body {
+    /* Frame 83 */
+    position: relative;
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.body_container {
+    /* Frame 73 */
+    position: relative;
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 200px;
+    margin-top: 100px;
+
+
+}
+
+
+.meeting_inputs_container {
+    /* Frame 79 */
+    position: static;
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+
+
+}
+
+
+.index_button {
+    /* Frame 74 */
+    position: static;
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px 0px;
+    border-radius: 12px;
+
+    background: rgb(83, 83, 83);
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.index_button img {
+    width: 25px;
+}
+
+.link_input_container input{
+    box-sizing: border-box;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 5px;
+}

@@ -1,0 +1,52 @@
+body {
+    /* Frame 83 */
+    position: relative;
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.central_video_container {
+    /* Frame 47 */
+    position: static;
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    
+
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 50px 10px;
+}
+
+.call_controls_container {
+    /* Frame 48 */
+    position: static;
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.call_controls_container img{
+    width: 50px;
+}
