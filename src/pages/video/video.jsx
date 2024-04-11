@@ -218,28 +218,35 @@ function Video(props) {
                     { urls: 'stun:stun2.l.google.com:19302' },
                     { urls: 'stun:stun3.l.google.com:19302' },
                     { urls: 'stun:stun4.l.google.com:19302' },
+                    { urls: "stun:stun.peerup.co.in:5349" },
                     {
-                        "url": "stun:global.stun.twilio.com:3478",
-                        "urls": "stun:global.stun.twilio.com:3478"
-                    },
-                    {
-                        "url": "turn:global.turn.twilio.com:3478?transport=udp",
-                        "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
-                        "urls": "turn:global.turn.twilio.com:3478?transport=udp",
-                        "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
-                    },
-                    {
-                        "url": "turn:global.turn.twilio.com:3478?transport=tcp",
-                        "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
-                        "urls": "turn:global.turn.twilio.com:3478?transport=tcp",
-                        "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
-                    },
-                    {
-                        "url": "turn:global.turn.twilio.com:443?transport=tcp",
-                        "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
-                        "urls": "turn:global.turn.twilio.com:443?transport=tcp",
-                        "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                        url: "turn:turn.peerup.co.in:5349",
+                        username: "admin",
+                        credential: "gNx7Pojoqchc9ugv1XsRomGqaMZjST",
+                        urls: "turn:turn.peerup.co.in:5349"
                     }
+                    // {
+                    //     "url": "stun:global.stun.twilio.com:3478",
+                    //     "urls": "stun:global.stun.twilio.com:3478"
+                    // },
+                    // {
+                    //     "url": "turn:global.turn.twilio.com:3478?transport=udp",
+                    //     "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
+                    //     "urls": "turn:global.turn.twilio.com:3478?transport=udp",
+                    //     "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                    // },
+                    // {
+                    //     "url": "turn:global.turn.twilio.com:3478?transport=tcp",
+                    //     "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
+                    //     "urls": "turn:global.turn.twilio.com:3478?transport=tcp",
+                    //     "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                    // },
+                    // {
+                    //     "url": "turn:global.turn.twilio.com:443?transport=tcp",
+                    //     "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
+                    //     "urls": "turn:global.turn.twilio.com:443?transport=tcp",
+                    //     "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                    // }
                 ]
             }
         })
@@ -304,28 +311,35 @@ function Video(props) {
                     { urls: 'stun:stun2.l.google.com:19302' },
                     { urls: 'stun:stun3.l.google.com:19302' },
                     { urls: 'stun:stun4.l.google.com:19302' },
+                    { urls: "stun:stun.peerup.co.in:5349" },
                     {
-                        "url": "stun:global.stun.twilio.com:3478",
-                        "urls": "stun:global.stun.twilio.com:3478"
-                    },
-                    {
-                        "url": "turn:global.turn.twilio.com:3478?transport=udp",
-                        "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
-                        "urls": "turn:global.turn.twilio.com:3478?transport=udp",
-                        "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
-                    },
-                    {
-                        "url": "turn:global.turn.twilio.com:3478?transport=tcp",
-                        "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
-                        "urls": "turn:global.turn.twilio.com:3478?transport=tcp",
-                        "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
-                    },
-                    {
-                        "url": "turn:global.turn.twilio.com:443?transport=tcp",
-                        "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
-                        "urls": "turn:global.turn.twilio.com:443?transport=tcp",
-                        "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                        url: "turn:turn.peerup.co.in:5349",
+                        username: "admin",
+                        credential: "gNx7Pojoqchc9ugv1XsRomGqaMZjST",
+                        urls: "turn:turn.peerup.co.in:5349"
                     }
+                    // {
+                    //     "url": "stun:global.stun.twilio.com:3478",
+                    //     "urls": "stun:global.stun.twilio.com:3478"
+                    // },
+                    // {
+                    //     "url": "turn:global.turn.twilio.com:3478?transport=udp",
+                    //     "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
+                    //     "urls": "turn:global.turn.twilio.com:3478?transport=udp",
+                    //     "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                    // },
+                    // {
+                    //     "url": "turn:global.turn.twilio.com:3478?transport=tcp",
+                    //     "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
+                    //     "urls": "turn:global.turn.twilio.com:3478?transport=tcp",
+                    //     "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                    // },
+                    // {
+                    //     "url": "turn:global.turn.twilio.com:443?transport=tcp",
+                    //     "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
+                    //     "urls": "turn:global.turn.twilio.com:443?transport=tcp",
+                    //     "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                    // }
                 ]
             }
         })
