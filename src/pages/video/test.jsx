@@ -256,6 +256,7 @@ export default function Video(props) {
             console.log("remote stream", stream)
             if (userVideo.current) {
                 userVideo.current.srcObject = stream
+                userVideo.current.play()
             }
 
         })
@@ -374,7 +375,7 @@ export default function Video(props) {
 
                 {(() => {
                     if (call_ongoing && userVideo) {
-                        return (<video playsInline ref={userVideo} autoPlay style={{ width: "100%" }} />)
+                        return (<video playsInline controls ref={userVideo} autoPlay style={{ width: "100%" }} />)
                     } else { return ('Not yet') }
 
                 })()}
