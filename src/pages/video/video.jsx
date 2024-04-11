@@ -222,6 +222,7 @@ function Video(props) {
         peer.on("stream", (stream) => {
             if (userVideo.current) {
                 userVideo.current.srcObject = stream
+                userVideo.current.play()
             }
 
         })
@@ -261,59 +262,60 @@ function Video(props) {
 
 
     function Answer_Call() {
-    const peer = new Peer({
-      initiator: false,
-      trickle: false,
-      stream: stream
-    })
-    peer.on("signal", (data) => {
-      console.log("Answering call: Send answer", { signal: data })
-      //socket.emit('ansered_call_responce', { from: socket.id, to: user2['from'], signal: data })
-      write_answer(data)
-    })
+        const peer = new Peer({
+            initiator: false,
+            trickle: false,
+            stream: stream
+        })
+        peer.on("signal", (data) => {
+            console.log("Answering call: Send answer", { signal: data })
+            //socket.emit('ansered_call_responce', { from: socket.id, to: user2['from'], signal: data })
+            write_answer(data)
+        })
 
 
 
 
 
-    peer.on("stream", (stream) => {
-      if (userVideo.current) {
-        userVideo.current.srcObject = stream
-      }
+        peer.on("stream", (stream) => {
+            if (userVideo.current) {
+                userVideo.current.srcObject = stream;
+                userVideo.current.play();
+            }
 
-    })
+        })
 
-    peer.on('connect', function () {
-      console.log("CONNECTED");
+        peer.on('connect', function () {
+            console.log("CONNECTED");
 
-    })
-    peer.on('error', function (err) {
-      console.log('Connection error', err.message, "+", err.name, "+", err, err)
-      if (peer.destroyed) {
-        console.log('The connection is destroyed, Reseting connection...')
-        respondent_reset()
-      }
-    })
-
-
-    connectionRef.current = peer
+        })
+        peer.on('error', function (err) {
+            console.log('Connection error', err.message, "+", err.name, "+", err, err)
+            if (peer.destroyed) {
+                console.log('The connection is destroyed, Reseting connection...')
+                respondent_reset()
+            }
+        })
 
 
-    function read_answer() {
-      var db = getDatabase();
-      const reference = ref(db, 'meetings/' + id + '/offer')
-      onValue(reference, (snapshot) => {
-        var data = snapshot.val();
-        console.log('Received call request', data)
-        if (data !== null && !peer.destroyed) {
-          peer.signal(data)
-          set_call_ongoing(true)
+        connectionRef.current = peer
+
+
+        function read_answer() {
+            var db = getDatabase();
+            const reference = ref(db, 'meetings/' + id + '/offer')
+            onValue(reference, (snapshot) => {
+                var data = snapshot.val();
+                console.log('Received call request', data)
+                if (data !== null && !peer.destroyed) {
+                    peer.signal(data)
+                    set_call_ongoing(true)
+                }
+
+            })
         }
-
-      })
+        read_answer()
     }
-    read_answer()
-  }
 
 
 
@@ -340,7 +342,7 @@ function Video(props) {
                                 <div style={{ width: '600px', height: "400px", "backgroundColor": 'black', 'border-radius': '12px' }}>
                                     {(() => {
                                         if (userVideo) {
-                                            return (<video playsInline ref={userVideo} autoPlay style={{ width: "100%", height: "100%" }} />)
+                                            return (<video playsInline controls ref={userVideo} autoPlay style={{ width: "100%", height: "100%" }} />)
                                         } else { return ('Not yet') }
 
                                     })()}
