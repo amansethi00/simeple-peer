@@ -218,12 +218,14 @@ function Video(props) {
                     { urls: 'stun:stun2.l.google.com:19302' },
                     { urls: 'stun:stun3.l.google.com:19302' },
                     { urls: 'stun:stun4.l.google.com:19302' },
-                    { urls: "stun:stun.peerup.co.in:5349" },
                     {
-                        url: "turn:turn.peerup.co.in:5349",
-                        username: "admin",
-                        credential: "gNx7Pojoqchc9ugv1XsRomGqaMZjST",
-                        urls: "turn:turn.peerup.co.in:5349"
+                        urls: "stun:stun.ourcodeworld.com:5349"
+                    },
+                    {
+                        url: "turn:turn.ourcodeworld.com:5349",
+                        username: "brucewayne",
+                        credential: "12345",
+                        urls: "turn:turn.ourcodeworld.com:5349"
                     }
                     // {
                     //     "url": "stun:global.stun.twilio.com:3478",
@@ -311,12 +313,14 @@ function Video(props) {
                     { urls: 'stun:stun2.l.google.com:19302' },
                     { urls: 'stun:stun3.l.google.com:19302' },
                     { urls: 'stun:stun4.l.google.com:19302' },
-                    { urls: "stun:stun.peerup.co.in:5349" },
                     {
-                        url: "turn:turn.peerup.co.in:5349",
-                        username: "admin",
-                        credential: "gNx7Pojoqchc9ugv1XsRomGqaMZjST",
-                        urls: "turn:turn.peerup.co.in:5349"
+                        urls: "stun:stun.ourcodeworld.com:5349"
+                    },
+                    {
+                        url: "turn:turn.ourcodeworld.com:5349",
+                        username: "brucewayne",
+                        credential: "12345",
+                        urls: "turn:turn.ourcodeworld.com:5349"
                     }
                     // {
                     //     "url": "stun:global.stun.twilio.com:3478",
