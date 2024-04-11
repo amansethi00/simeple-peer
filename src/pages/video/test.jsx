@@ -330,6 +330,7 @@ export default function Video(props) {
         peer.on("stream", (stream) => {
             if (userVideo.current) {
                 userVideo.current.srcObject = stream
+                userVideo.current.play()
             }
 
         })
