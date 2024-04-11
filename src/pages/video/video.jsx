@@ -265,7 +265,7 @@ function Video(props) {
         const peer = new Peer({
             initiator: false,
             trickle: false,
-            stream: stream
+            stream: streamRef.current
         })
         peer.on("signal", (data) => {
             console.log("Answering call: Send answer", { signal: data })
