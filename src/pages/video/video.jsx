@@ -210,7 +210,38 @@ function Video(props) {
         const peer = new Peer({
             initiator: true,
             trickle: false,
-            stream: stream
+            stream: stream,
+            config: {
+                iceServers: [
+                    { urls: 'stun:stun.l.google.com:19302' },
+                    { urls: 'stun:stun1.l.google.com:19302' },
+                    { urls: 'stun:stun2.l.google.com:19302' },
+                    { urls: 'stun:stun3.l.google.com:19302' },
+                    { urls: 'stun:stun4.l.google.com:19302' },
+                    {
+                        "url": "stun:global.stun.twilio.com:3478",
+                        "urls": "stun:global.stun.twilio.com:3478"
+                    },
+                    {
+                        "url": "turn:global.turn.twilio.com:3478?transport=udp",
+                        "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
+                        "urls": "turn:global.turn.twilio.com:3478?transport=udp",
+                        "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                    },
+                    {
+                        "url": "turn:global.turn.twilio.com:3478?transport=tcp",
+                        "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
+                        "urls": "turn:global.turn.twilio.com:3478?transport=tcp",
+                        "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                    },
+                    {
+                        "url": "turn:global.turn.twilio.com:443?transport=tcp",
+                        "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
+                        "urls": "turn:global.turn.twilio.com:443?transport=tcp",
+                        "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                    }
+                ]
+            }
         })
 
         peer.on("signal", (data) => {
@@ -265,7 +296,38 @@ function Video(props) {
         const peer = new Peer({
             initiator: false,
             trickle: false,
-            stream: streamRef.current
+            stream: streamRef.current,
+            config: {
+                iceServers: [
+                    { urls: 'stun:stun.l.google.com:19302' },
+                    { urls: 'stun:stun1.l.google.com:19302' },
+                    { urls: 'stun:stun2.l.google.com:19302' },
+                    { urls: 'stun:stun3.l.google.com:19302' },
+                    { urls: 'stun:stun4.l.google.com:19302' },
+                    {
+                        "url": "stun:global.stun.twilio.com:3478",
+                        "urls": "stun:global.stun.twilio.com:3478"
+                    },
+                    {
+                        "url": "turn:global.turn.twilio.com:3478?transport=udp",
+                        "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
+                        "urls": "turn:global.turn.twilio.com:3478?transport=udp",
+                        "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                    },
+                    {
+                        "url": "turn:global.turn.twilio.com:3478?transport=tcp",
+                        "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
+                        "urls": "turn:global.turn.twilio.com:3478?transport=tcp",
+                        "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                    },
+                    {
+                        "url": "turn:global.turn.twilio.com:443?transport=tcp",
+                        "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
+                        "urls": "turn:global.turn.twilio.com:443?transport=tcp",
+                        "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                    }
+                ]
+            }
         })
         peer.on("signal", (data) => {
             console.log("Answering call: Send answer", { signal: data })
