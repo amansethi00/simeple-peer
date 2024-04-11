@@ -26,7 +26,7 @@ const firebaseConfig = {
     messagingSenderId: "331595037617",
     appId: "1:331595037617:web:33d7379becdde728819b90",
     measurementId: "G-WCLNC4SN6D"
-  };
+};
 // Initialize Firebase
 initializeApp(firebaseConfig);
 
@@ -42,8 +42,8 @@ export default function Video(props) {
     const { id } = useParams();
 
     //Connection variables
-    const [call_request,set_call_request]=useState({sdp:null})
-    const [call_responce,set_call_responce]=useState({sdp:null})
+    const [call_request, set_call_request] = useState({ sdp: null })
+    const [call_responce, set_call_responce] = useState({ sdp: null })
 
 
     //Stream variables
@@ -87,7 +87,7 @@ export default function Video(props) {
                     //If its another user send user data
                     Answer_Call()
                 }
-            }else{
+            } else {
                 //Even when the user is not in the database they can just join the meeting
                 Answer_Call()
             }
@@ -158,7 +158,7 @@ export default function Video(props) {
                     myVideo.current.srcObject = stream;
                 }
                 setStream(stream)
-            }catch (error) {
+            } catch (error) {
                 console.error('Error accessing media:', error);
             }
         };
@@ -208,8 +208,32 @@ export default function Video(props) {
                     { urls: 'stun:stun2.l.google.com:19302' },
                     { urls: 'stun:stun3.l.google.com:19302' },
                     { urls: 'stun:stun4.l.google.com:19302' },
-                ]
-            }
+
+                    {
+                        "url": "stun:global.stun.twilio.com:3478",
+                        "urls": "stun:global.stun.twilio.com:3478"
+                    },
+                    {
+                        "url": "turn:global.turn.twilio.com:3478?transport=udp",
+                        "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
+                        "urls": "turn:global.turn.twilio.com:3478?transport=udp",
+                        "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                    },
+                    {
+                        "url": "turn:global.turn.twilio.com:3478?transport=tcp",
+                        "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
+                        "urls": "turn:global.turn.twilio.com:3478?transport=tcp",
+                        "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                    },
+                    {
+                        "url": "turn:global.turn.twilio.com:443?transport=tcp",
+                        "username": "e18ecd309d314091cc0cc16fcef9c230a9cf667611f8a75fc175a3086ebd52be",
+                        "urls": "turn:global.turn.twilio.com:443?transport=tcp",
+                        "credential": "rMZ1e27ud4xQxoWT2GokejmT5Uky8meDVDFQTq4Z3tk="
+                    }
+
+                ],
+            },
         })
 
         peer.on("signal", (data) => {
@@ -219,7 +243,7 @@ export default function Video(props) {
             if (id === user_data['id']) {
                 var db = getFirestore()
                 var Ref = doc(db, 'users', user_data.id);
-                setDoc(Ref, { call_request: data, call_responce:null}, { merge: true });
+                setDoc(Ref, { call_request: data, call_responce: null }, { merge: true });
                 console.log('Call request sent')
             } else {
                 console.log('Checking for call request, cant make a call request')
@@ -229,7 +253,7 @@ export default function Video(props) {
         })
 
         peer.on("stream", (stream) => {
-            console.log("remote stream",stream)
+            console.log("remote stream", stream)
             if (userVideo.current) {
                 userVideo.current.srcObject = stream
             }
@@ -245,7 +269,7 @@ export default function Video(props) {
         const unsub = onSnapshot(doc(db, "users", id), (doc) => {
             console.log("Current data: ", doc.data());
 
-            if (doc.data()['call_responce'] != null && doc.data()['call_responce']['sdp']!==call_responce['sdp'] ) {
+            if (doc.data()['call_responce'] != null && doc.data()['call_responce']['sdp'] !== call_responce['sdp']) {
                 console.log('Call has been accepted', doc.data()['call_responce'])
                 //Call_Accepted_responce(data.signal)
                 if (peer != null) {
@@ -268,7 +292,7 @@ export default function Video(props) {
         var db = getFirestore()
         const snap = await getDoc(doc(db, 'users', id))
         if (snap.exists()) {
-            console.log("Answering call...",snap.data()['call_request'])
+            console.log("Answering call...", snap.data()['call_request'])
             set_call_request(snap.data()['call_request'])
             //Check later if its null
             callerSignal = snap.data()['call_request']
