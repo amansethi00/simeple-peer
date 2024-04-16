@@ -219,14 +219,24 @@ function Video(props) {
                     { urls: 'stun:stun3.l.google.com:19302' },
                     { urls: 'stun:stun4.l.google.com:19302' },
                     {
-                        urls: "stun:stun.ourcodeworld.com:5349"
+
+                        urls: "stun:stun.peerup.co.in:3478"
+                    },{
+                        url: "turn:turn.peerup.co.in:3478",
+                        username: "guest",
+                        credential: "somepassword",
+                        urls: "turn:turn.peerup.co.in:3478"
                     },
-                    {
-                        url: "turn:turn.ourcodeworld.com:5349",
-                        username: "brucewayne",
-                        credential: "12345",
-                        urls: "turn:turn.ourcodeworld.com:5349"
-                    }
+
+                    // {
+                    //     urls: "stun:stun.ourcodeworld.com:5349"
+                    // },
+                    // {
+                    //     url: "turn:turn.ourcodeworld.com:5349",
+                    //     username: "brucewayne",
+                    //     credential: "12345",
+                    //     urls: "turn:turn.ourcodeworld.com:5349"
+                    // }
                     // {
                     //     "url": "stun:global.stun.twilio.com:3478",
                     //     "urls": "stun:global.stun.twilio.com:3478"
@@ -314,14 +324,23 @@ function Video(props) {
                     { urls: 'stun:stun3.l.google.com:19302' },
                     { urls: 'stun:stun4.l.google.com:19302' },
                     {
-                        urls: "stun:stun.ourcodeworld.com:5349"
+
+                        urls: "stun:stun.peerup.co.in:3478"
+                    },{
+                        url: "turn:turn.peerup.co.in:3478",
+                        username: "guest",
+                        credential: "somepassword",
+                        urls: "turn:turn.peerup.co.in:3478"
                     },
-                    {
-                        url: "turn:turn.ourcodeworld.com:5349",
-                        username: "brucewayne",
-                        credential: "12345",
-                        urls: "turn:turn.ourcodeworld.com:5349"
-                    }
+                    // {
+                    //     urls: "stun:stun.ourcodeworld.com:5349"
+                    // },
+                    // {
+                    //     url: "turn:turn.ourcodeworld.com:5349",
+                    //     username: "brucewayne",
+                    //     credential: "12345",
+                    //     urls: "turn:turn.ourcodeworld.com:5349"
+                    // }
                     // {
                     //     "url": "stun:global.stun.twilio.com:3478",
                     //     "urls": "stun:global.stun.twilio.com:3478"
