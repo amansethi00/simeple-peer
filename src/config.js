@@ -10,14 +10,15 @@
 // };
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBMgOF4NyGBcJbvRv3nWXzAMClH17RG9I4",
-  authDomain: "peerup-46f81.firebaseapp.com",
-  projectId: "peerup-46f81",
-  storageBucket: "peerup-46f81.appspot.com",
-  messagingSenderId: "530234763667",
-  appId: "1:530234763667:web:2f1f3fd10365d1549d6066",
-  measurementId: "G-VLGQZ85Q6J"
+  apiKey: 'AIzaSyBMgOF4NyGBcJbvRv3nWXzAMClH17RG9I4',
+  authDomain: 'peerup-46f81.firebaseapp.com',
+  databaseURL:
+    'https://peerup-46f81-default-rtdb.asia-southeast1.firebasedatabase.app',
+  projectId: 'peerup-46f81',
+  storageBucket: 'peerup-46f81.appspot.com',
+  messagingSenderId: '530234763667',
+  appId: '1:530234763667:web:2f1f3fd10365d1549d6066',
+  measurementId: 'G-VLGQZ85Q6J',
 };
 
-
-  export default firebaseConfig
+export default firebaseConfig;
