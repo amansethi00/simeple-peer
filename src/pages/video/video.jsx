@@ -218,16 +218,16 @@ function Video(props) {
                     { urls: 'stun:stun2.l.google.com:19302' },
                     { urls: 'stun:stun3.l.google.com:19302' },
                     { urls: 'stun:stun4.l.google.com:19302' },
-                    {
+                    // {
 
-                        urls: "stun:stun.peerup.co.in:3478"
-                    },
-                    {
-                        url: "turn:turn.peerup.co.in:3478",
-                        username: "guest",
-                        credential: "somepassword",
-                        urls: "turn:turn.peerup.co.in:3478"
-                    },
+                    //     urls: "stun:stun.peerup.co.in:3478"
+                    // },
+                    // {
+                    //     url: "turn:turn.peerup.co.in:3478",
+                    //     username: "guest",
+                    //     credential: "somepassword",
+                    //     urls: "turn:turn.peerup.co.in:3478"
+                    // },
 
                     // {
                     //     urls: "stun:stun.ourcodeworld.com:5349"
@@ -324,16 +324,16 @@ function Video(props) {
                     { urls: 'stun:stun2.l.google.com:19302' },
                     { urls: 'stun:stun3.l.google.com:19302' },
                     { urls: 'stun:stun4.l.google.com:19302' },
-                    {
+                    // {
 
-                        urls: "stun:stun.peerup.co.in:3478"
-                    },
-                    {
-                        url: "turn:turn.peerup.co.in:3478",
-                        username: "guest",
-                        credential: "somepassword",
-                        urls: "turn:turn.peerup.co.in:3478"
-                    },
+                    //     urls: "stun:stun.peerup.co.in:3478"
+                    // },
+                    // {
+                    //     url: "turn:turn.peerup.co.in:3478",
+                    //     username: "guest",
+                    //     credential: "somepassword",
+                    //     urls: "turn:turn.peerup.co.in:3478"
+                    // },
                     // {
                     //     urls: "stun:stun.ourcodeworld.com:5349"
                     // },

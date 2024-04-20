@@ -43,10 +43,10 @@ function NewVideo(props) {
     const userVideo = useRef()
     const connectionRef = useRef()
 
+    const [call_ongoing, set_call_ongoing] = useState(false)
 
     //Supporting data
     const [ringing, set_ringing] = useState(false)
-    const [call_ongoing, set_call_ongoing] = useState(false)
     const [users, set_users] = useState([])
     const [user2, set_user2] = useState({})
 
